@@ -20,7 +20,7 @@ public class minstairs {
 
           if(arr[i] > 0){
             int min = Integer.MAX_VALUE;
-          }
+          
             for(int j=1; j<=arr[i] && i+j < dp.length; j++){
                 if(dp[i+j] != null){
                   min = Math.min(min, dp[i+j]);
@@ -31,6 +31,8 @@ public class minstairs {
               dp[i] = min + 1;
             }
         }
+
+     }
 
         System.out.println(dp[0]);
     }
